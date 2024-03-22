@@ -1,7 +1,7 @@
 from typing import List
 import hank_gathers as hank
 from ipydatagrid import DataGrid
-from player_stats import SquadRow
+from player_stats import SquadRow, Squads
 import pandas as pd
 from tabulate import tabulate
 
@@ -28,7 +28,7 @@ def get_scores():
 
 def output_html(outfile: str): 
 
-    squads = hank.gather()
+    squads: Squads = hank.gather()
     col = ['player', 'team', 'rd1', 'rd2','rd3','rd4','rd5','rd6', 'total']
 
     html = """<html>
@@ -36,11 +36,18 @@ def output_html(outfile: str):
 table, th, td {
   border: 1px solid;
 }
+
+h3 .green-text {
+    color: green;
+  }
+
 </style>
 </head>
 <body>
 """
-    for squad in squads:
+    rows: int = 0
+    ss = sorted(squads, key=lambda x: x.totalPoints, reverse=True)
+    for squad in ss:
         html += "<h2> Squad Leader: {0}</h2>".format(squad.coach)
         html += "<h3> total points: {0}</h3>".format(squad.totalPoints)
         table = "<table>\n<tbody>\n"
@@ -52,6 +59,7 @@ table, th, td {
             table += "  <tr>\n"
             table += "    <td>{0}</td>\n".format(player.player.strip())
             table += "    <td>{0}</td>\n".format(player.team)
+            i: int = 0
             for game in player.games:
                 if game.round == 'First Round':
                     table += "    <td>{0}</td>\n".format(game.points)
@@ -59,7 +67,13 @@ table, th, td {
                     table += "    <td>{0}</td>\n".format(game.points)
                 else: 
                     raise Exception('Unkown round {0}'.format(game.round))
+                i+=1
+            
+            for f in range(6-i):
+                table += "    <td></td>\n"
+            table += "    <td>{0}</td>\n".format(player.totalPoints)
             table += "  </tr>\n"
+            rows+=1
         table += "</tbody>\n</table>\n"
         html += "{0}\n".format(table)
     html += "</body>\n</html>"
