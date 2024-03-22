@@ -7,37 +7,56 @@ import requests
 from player_stats import PlayerStats, Game, Squad, Squads
 from typing import List
 import time
+from datetime import datetime
 
 
-def cli(args=None):
+def bracketDates() -> List[str]:
+    dates: List[str] = ['2024/03/21', '2024/03/22', '2024/03/23', '2024/03/24',
+                        '2024/03/28', '2024/03/29', '2024/03/30', '2024/03/31',
+                        '2024/04/04', '2024/04/05', '2024/04/06', '2024/04/07',
+                        '2024/04/11', '2024/04/12', '2024/04/13', '2024/04/15']
+    
+    validDates: List[str] = []
+    today = datetime.today().date()
+
+    for d in dates:
+        dt = datetime.strptime(d, '%Y/%m/%d').date()
+        if dt <= today:
+            validDates.append(d)
+
+    return validDates
+
+def gather(args=None):
     exit_code: int = 0
     boxScoreUrl = "https://data.ncaa.com/casablanca{0}/boxscore.json"
     squads: Squads = []
     playerStats: List[PlayerStats] = []
     currentSquad: Squad = None
 
-    try:
-        logging.info('populating squads')
-        with open('ncaa_player_pool/squads.json', 'r') as info:
-            squadData = json.load(info)
+    logging.info('populating squads')
+    with open('ncaa_player_pool/squads.json', 'r') as info:
+        squadData = json.load(info)
 
-        for squad in squadData:
-            p = PlayerStats(player=squad['Player'], team=squad['Team'], games=[])
+    for squad in squadData:
+        p = PlayerStats(player=squad['Player'], team=squad['Team'], games=[])
 
-            if currentSquad and currentSquad.coach == squad['coach']:
-                currentSquad.players.append(p)
-            else:
-                currentSquad = Squad(coach=squad['coach'], players=[p])
-                squads.append(currentSquad)
-                
+        if currentSquad and currentSquad.coach == squad['coach']:
+            currentSquad.players.append(p)
+        else:
+            currentSquad = Squad(coach=squad['coach'], players=[p])
+            squads.append(currentSquad)
+            
 
-        logging.info('starting...')
-        dayOneGamesUrl = 'https://data.ncaa.com/casablanca/scoreboard/basketball-men/d1/2024/03/21/scoreboard.json'
+    logging.info('starting...')
 
-        dayOneGames = requests.get(dayOneGamesUrl).json()['games']
+    for gameDay in bracketDates(): 
+
+        gameDayUrl = 'https://data.ncaa.com/casablanca/scoreboard/basketball-men/d1/{0}/scoreboard.json'.format(gameDay)
+
+        currentGames = requests.get(gameDayUrl).json()['games']
         
-        for dog in dayOneGames:
-            game = dog['game']
+        for cg in currentGames:
+            game = cg['game']
             bsUrl = boxScoreUrl.format(game['url'])
             boxScore: dict = requests.get(bsUrl).json()
             #time.sleep(1)
@@ -63,14 +82,17 @@ def cli(args=None):
                                 if foundPlayer:
                                     break
             else:
-                logging.warn("Boxscore has not teams")
-        for s in squads:
+                logging.warn("Boxscore has no teams, game most likely hasn't started yet")
+    return squads
+
+def hank(args=None):
+    try:
+        for s in gather():
             print(s.model_dump_json())
     except Exception as e:
         exit_code = 1
         logging.fatal(f"{e}", exc_info=True)
-
     ##sys.exit(exit_code)
 
 if __name__ == "__main__":
-    cli()
+    hank()

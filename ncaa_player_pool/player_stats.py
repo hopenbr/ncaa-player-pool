@@ -45,3 +45,15 @@ class Squads(RootModel):
 
     def __getitem__(self, item):
         return self.root[item]
+    
+
+class SquadRow(BaseModel):
+    coach: str
+    player: str
+    team: str
+    round1: Optional[int] = 0
+    round2: Optional[int] = 0
+    round3: Optional[int] = 0 
+    round4: Optional[int] = 0 
+    round5: Optional[int] = 0
+    round6: Optional[int] = 0
