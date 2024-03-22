@@ -1,0 +1,562 @@
+[
+  {
+    "Player": "Dalton Knecht",
+    "Team": "Tennessee",
+    "coach": "ox"
+  },
+  {
+    "Player": "Pelle Larrson",
+    "Team": "Arizona",
+    "coach": "ox"
+  },
+  {
+    "Player": "Stephen Castle",
+    "Team": "Uconn",
+    "coach": "ox"
+  },
+  {
+    "Player": "Kylan Boswell",
+    "Team": "Arizona",
+    "coach": "ox"
+  },
+  {
+    "Player": "Jared McCain",
+    "Team": "Duke",
+    "coach": "ox"
+  },
+  {
+    "Player": "Jarod Lucas",
+    "Team": "Nevada",
+    "coach": "ox"
+  },
+  {
+    "Player": "Kenan Blackshear",
+    "Team": "Nevada",
+    "coach": "ox"
+  },
+  {
+    "Player": "Wade Taylor",
+    "Team": "Texas A&M",
+    "coach": "ox"
+  },
+  {
+    "Player": "Mark Sears",
+    "Team": "Alabama",
+    "coach": "norm"
+  },
+  {
+    "Player": "Troy Alexander",
+    "Team": "Creighton",
+    "coach": "norm"
+  },
+  {
+    "Player": "Coleman Hawkins",
+    "Team": "Illinois",
+    "coach": "norm"
+  },
+  {
+    "Player": "Aaron Estrada",
+    "Team": "Alabama",
+    "coach": "norm"
+  },
+  {
+    "Player": "Jaxson Robinson",
+    "Team": "Byu",
+    "coach": "norm"
+  },
+  {
+    "Player": "Max Abmas",
+    "Team": "Texas",
+    "coach": "norm"
+  },
+  {
+    "Player": "Great Osobor",
+    "Team": "Utah st.",
+    "coach": "norm"
+  },
+  {
+    "Player": "Bo Buie",
+    "Team": "Northwestern",
+    "coach": "norm"
+  },
+  {
+    "Player": "LJ Cryer",
+    "Team": "Houston",
+    "coach": "chaz"
+  },
+  {
+    "Player": "Donavan Clingin",
+    "Team": "Uconn",
+    "coach": "chaz"
+  },
+  {
+    "Player": "Jonas Aldoo",
+    "Team": "Tennessee",
+    "coach": "chaz"
+  },
+  {
+    "Player": "Zakai Zeigler",
+    "Team": "Tennessee",
+    "coach": "chaz"
+  },
+  {
+    "Player": "Tolu Smith",
+    "Team": "Mississippi St.",
+    "coach": "chaz"
+  },
+  {
+    "Player": "Josh Hubbard",
+    "Team": "Mississippi St.",
+    "coach": "chaz"
+  },
+  {
+    "Player": "N'Faly Dante",
+    "Team": "Oregon",
+    "coach": "chaz"
+  },
+  {
+    "Player": "Jackson Shelstad",
+    "Team": "Oregon",
+    "coach": "chaz"
+  },
+  {
+    "Player": "Rj Davis",
+    "Team": "North Carolina",
+    "coach": "urb"
+  },
+  {
+    "Player": "Rob Dillingham",
+    "Team": "Kentucky",
+    "coach": "urb"
+  },
+  {
+    "Player": "Tucker Devries",
+    "Team": "Drake",
+    "coach": "urb"
+  },
+  {
+    "Player": "Laedon Ledee",
+    "Team": "San Diego St.",
+    "coach": "urb"
+  },
+  {
+    "Player": "Jayden Nunn",
+    "Team": "Baylor",
+    "coach": "urb"
+  },
+  {
+    "Player": "Tyon Grant-Foster",
+    "Team": "Grand Canyon",
+    "coach": "urb"
+  },
+  {
+    "Player": "Ashor Achor",
+    "Team": "Samford",
+    "coach": "urb"
+  },
+  {
+    "Player": "Tyson Walker",
+    "Team": "Michigan st.",
+    "coach": "urb"
+  },
+  {
+    "Player": "BradenSmith",
+    "Team": "Purdue",
+    "coach": "shelton"
+  },
+  {
+    "Player": "Rayj Dennis",
+    "Team": "Baylor",
+    "coach": "shelton"
+  },
+  {
+    "Player": "Graham Ike",
+    "Team": "Gonzaga",
+    "coach": "shelton"
+  },
+  {
+    "Player": "Daron Holmes",
+    "Team": "Dayton",
+    "coach": "shelton"
+  },
+  {
+    "Player": "Meechie Johnson",
+    "Team": "South Carolina",
+    "coach": "shelton"
+  },
+  {
+    "Player": "Terrence Edwards Jr.",
+    "Team": "James Madison",
+    "coach": "shelton"
+  },
+  {
+    "Player": "Dj Home",
+    "Team": "NC State",
+    "coach": "shelton"
+  },
+  {
+    "Player": "Johni Broome",
+    "Team": "Auburn",
+    "coach": "shelton"
+  },
+  {
+    "Player": "Cam Spencer",
+    "Team": "Uconn",
+    "coach": "gardner"
+  },
+  {
+    "Player": "Hunter Dickerson",
+    "Team": "Kansas",
+    "coach": "gardner"
+  },
+  {
+    "Player": "Aj Stoff",
+    "Team": "Wisconsin",
+    "coach": "gardner"
+  },
+  {
+    "Player": "Reed Sheppard",
+    "Team": "Kentucky",
+    "coach": "gardner"
+  },
+  {
+    "Player": "Donovan Dent",
+    "Team": "New Mexico",
+    "coach": "gardner"
+  },
+  {
+    "Player": "Johnny Furphy",
+    "Team": "Kansas",
+    "coach": "gardner"
+  },
+  {
+    "Player": "Tyree Radford",
+    "Team": "Texas A&M",
+    "coach": "gardner"
+  },
+  {
+    "Player": "KJ Simmons",
+    "Team": "Colorado",
+    "coach": "gardner"
+  },
+  {
+    "Player": "Antonio Reeves",
+    "Team": "Kentucky",
+    "coach": "tim kull"
+  },
+  {
+    "Player": "Keshon Gilbert",
+    "Team": "Iowa St.",
+    "coach": "tim kull"
+  },
+  {
+    "Player": "Ose Ighodaro",
+    "Team": "Marquette",
+    "coach": "tim kull"
+  },
+  {
+    "Player": "Rop Isaacs",
+    "Team": "Texas Tech",
+    "coach": "tim kull"
+  },
+  {
+    "Player": "Kj Adams Jr.",
+    "Team": "Kansas",
+    "coach": "tim kull"
+  },
+  {
+    "Player": "Elliot Cadeau",
+    "Team": "North Carolina",
+    "coach": "tim kull"
+  },
+  {
+    "Player": "Trey Kaufman-Renn",
+    "Team": "Purdue",
+    "coach": "tim kull"
+  },
+  {
+    "Player": "Mark Mitchell",
+    "Team": "Duke",
+    "coach": "tim kull"
+  },
+  {
+    "Player": "Baylor Schelerman",
+    "Team": "Creighton",
+    "coach": "ludlow"
+  },
+  {
+    "Player": "Kam Jones",
+    "Team": "Marquette",
+    "coach": "ludlow"
+  },
+  {
+    "Player": "Keshad Johnson",
+    "Team": "Arizona",
+    "coach": "ludlow"
+  },
+  {
+    "Player": "Tamin Lipsey",
+    "Team": "Iowa St.",
+    "coach": "ludlow"
+  },
+  {
+    "Player": "Grant Nelson",
+    "Team": "Alabama",
+    "coach": "ludlow"
+  },
+  {
+    "Player": "Jaelen House",
+    "Team": "New Mexico",
+    "coach": "ludlow"
+  },
+  {
+    "Player": "Dylan Disu",
+    "Team": "Texas",
+    "coach": "ludlow"
+  },
+  {
+    "Player": "Joseph Girard",
+    "Team": "Clemson",
+    "coach": "ludlow"
+  },
+  {
+    "Player": "Terrence Shannon",
+    "Team": "Illinois",
+    "coach": "stick"
+  },
+  {
+    "Player": "Marcus Domask",
+    "Team": "Illinois",
+    "coach": "stick"
+  },
+  {
+    "Player": "Tyler Kolek",
+    "Team": "Marquette",
+    "coach": "stick"
+  },
+  {
+    "Player": "J'wan Roberts",
+    "Team": "Houston",
+    "coach": "stick"
+  },
+  {
+    "Player": "Jalen Bridges",
+    "Team": "Baylor",
+    "coach": "stick"
+  },
+  {
+    "Player": "Yves Missi",
+    "Team": "Baylor",
+    "coach": "stick"
+  },
+  {
+    "Player": "Steven Ashworth",
+    "Team": "Creighton",
+    "coach": "stick"
+  },
+  {
+    "Player": "Stevie Mitchell",
+    "Team": "Marquette",
+    "coach": "stick"
+  },
+  {
+    "Player": "Zach Edey",
+    "Team": "Purdue",
+    "coach": "bear"
+  },
+  {
+    "Player": "Emanuel Sharp",
+    "Team": "Houston",
+    "coach": "bear"
+  },
+  {
+    "Player": "Harrison Ingram",
+    "Team": "North carolina",
+    "coach": "bear"
+  },
+  {
+    "Player": "Walter Clayton Jr.",
+    "Team": "Florida",
+    "coach": "bear"
+  },
+  {
+    "Player": "Milan Momcilovic",
+    "Team": "Iowa St.",
+    "coach": "bear"
+  },
+  {
+    "Player": "Josiah Jordan Jamar",
+    "Team": "Tennessee",
+    "coach": "bear"
+  },
+  {
+    "Player": "Johnell Davis",
+    "Team": "Fla. Atlantic",
+    "coach": "bear"
+  },
+  {
+    "Player": "Jalen Blackmon",
+    "Team": "Stetson",
+    "coach": "bear"
+  },
+  {
+    "Player": "Jamal Shead",
+    "Team": "Houston",
+    "coach": "herbie"
+  },
+  {
+    "Player": "Fletcher Loyer",
+    "Team": "Purdue",
+    "coach": "herbie"
+  },
+  {
+    "Player": "Cormac Ryan",
+    "Team": "North Carolina",
+    "coach": "herbie"
+  },
+  {
+    "Player": "Tre Mitchell",
+    "Team": "Kentucky",
+    "coach": "herbie"
+  },
+  {
+    "Player": "Jamal Mashburn Jr.",
+    "Team": "New Mexico",
+    "coach": "herbie"
+  },
+  {
+    "Player": "DJ Wagner",
+    "Team": "Kentucky",
+    "coach": "herbie"
+  },
+  {
+    "Player": "Jermaine Couisnard",
+    "Team": "Oregon",
+    "coach": "herbie"
+  },
+  {
+    "Player": "Alex Karaban",
+    "Team": "Uconn",
+    "coach": "herbie"
+  },
+  {
+    "Player": "Ryan Kalkbrenner",
+    "Team": "Creighton",
+    "coach": "hop"
+  },
+  {
+    "Player": "Jaylin Williams",
+    "Team": "Auburn",
+    "coach": "hop"
+  },
+  {
+    "Player": "Kyle Fillipowski",
+    "Team": "Duke",
+    "coach": "hop"
+  },
+  {
+    "Player": "Ja'kobe Walter",
+    "Team": "Baylor",
+    "coach": "hop"
+  },
+  {
+    "Player": "ChadBaker-Mazara",
+    "Team": "Auburn",
+    "coach": "hop"
+  },
+  {
+    "Player": "Rylan Griffen",
+    "Team": "Alabama",
+    "coach": "hop"
+  },
+  {
+    "Player": "Aldan Mahaney",
+    "Team": "Saint Mary's (CA)",
+    "coach": "hop"
+  },
+  {
+    "Player": "TJ Bickerstaff",
+    "Team": "James Madison",
+    "coach": "hop"
+  },
+  {
+    "Player": "Caleb Love",
+    "Team": "Arizona",
+    "coach": "vicious"
+  },
+  {
+    "Player": "Armando Bacat",
+    "Team": "North Carolina",
+    "coach": "vicious"
+  },
+  {
+    "Player": "Oumar Ballo",
+    "Team": "Arizona",
+    "coach": "vicious"
+  },
+  {
+    "Player": "Jeremy Roach",
+    "Team": "Duke",
+    "coach": "vicious"
+  },
+  {
+    "Player": "Curtis Jones",
+    "Team": "Iowa St.",
+    "coach": "vicious"
+  },
+  {
+    "Player": "Quincy Guerrier",
+    "Team": "Illinois",
+    "coach": "vicious"
+  },
+  {
+    "Player": "David Joplin",
+    "Team": "Marquette",
+    "coach": "vicious"
+  },
+  {
+    "Player": "Tre Mitchell",
+    "Team": "Iowa St.",
+    "coach": "vicious"
+  },
+  {
+    "Player": "Tristen Newtown",
+    "Team": "Uconn",
+    "coach": "gman"
+  },
+  {
+    "Player": "Kevin McCullar",
+    "Team": "Kansas",
+    "coach": "gman"
+  },
+  {
+    "Player": "Lance Jones",
+    "Team": "Purdue",
+    "coach": "gman"
+  },
+  {
+    "Player": "PJ Hall",
+    "Team": "Clemson",
+    "coach": "gman"
+  },
+  {
+    "Player": "Langston Love",
+    "Team": "Baylor",
+    "coach": "gman"
+  },
+  {
+    "Player": "Anton Watson",
+    "Team": "Gonzaga",
+    "coach": "gman"
+  },
+  {
+    "Player": "Nolan Hickman",
+    "Team": "Gonzaga",
+    "coach": "gman"
+  },
+  {
+    "Player": "Tyrese Proctor",
+    "Team": "Duke",
+    "coach": "gman"
+  }
+]

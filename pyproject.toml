@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "ncaa_player_pool"
+version = "0.1.0"
+description = "'player point total collector'"
+authors = ["Brian Hopenwasser <Brian.Hopenwasser@lfg.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.31.0"
+pydantic = "^2.6.4"
+shiny = "^0.8.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+buildSquad = "ncaa_player_pool.hank_gathers:cli"
