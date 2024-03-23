@@ -64,7 +64,7 @@ def gather(args=None):
             if 'teams' in boxScore.keys():
                 for team in boxScore['teams']:
                     tid: str = '{0}'.format(team['teamId']) #force to string vs int 
-                    teamName = [t for t in boxScore['meta']['teams'] if t['id'] == tid][0]['shortName']
+                    teamName = [t for t in boxScore['meta']['teams'] if t['id'] == tid][0]['seoName']
 
                     for player in team['playerStats']:
                         points = player['points']
@@ -75,7 +75,7 @@ def gather(args=None):
                         foundPlayer: bool = False
                         for s in squads:
                             for p in s.players:
-                                if p.player == playerName and teamName == p.team:
+                                if p.player.lower() == playerName.lower() and teamName == p.team.lower():
                                     p.games.append(g)
                                     foundPlayer = True
                                     break

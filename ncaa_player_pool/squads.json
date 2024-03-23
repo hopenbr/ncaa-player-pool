@@ -5,13 +5,13 @@
     "coach": "ox"
   },
   {
-    "Player": "Pelle Larrson",
+    "Player": "Pelle Larsson",
     "Team": "Arizona",
     "coach": "ox"
   },
   {
-    "Player": "Stephen Castle",
-    "Team": "Uconn",
+    "Player": "Stephon Castle",
+    "Team": "uconn",
     "coach": "ox"
   },
   {
@@ -35,8 +35,8 @@
     "coach": "ox"
   },
   {
-    "Player": "Wade Taylor",
-    "Team": "Texas A&M",
+    "Player": "Wade Taylor IV",
+    "Team": "texas-am",
     "coach": "ox"
   },
   {
@@ -45,7 +45,7 @@
     "coach": "norm"
   },
   {
-    "Player": "Troy Alexander",
+    "Player": "Trey Alexander",
     "Team": "Creighton",
     "coach": "norm"
   },
@@ -71,11 +71,11 @@
   },
   {
     "Player": "Great Osobor",
-    "Team": "Utah st.",
+    "Team": "utah-st",
     "coach": "norm"
   },
   {
-    "Player": "Bo Buie",
+    "Player": "Boo Buie",
     "Team": "Northwestern",
     "coach": "norm"
   },
@@ -85,12 +85,12 @@
     "coach": "chaz"
   },
   {
-    "Player": "Donavan Clingin",
-    "Team": "Uconn",
+    "Player": "Donovan Clingan",
+    "Team": "uconn",
     "coach": "chaz"
   },
   {
-    "Player": "Jonas Aldoo",
+    "Player": "Jonas Aidoo",
     "Team": "Tennessee",
     "coach": "chaz"
   },
@@ -100,13 +100,13 @@
     "coach": "chaz"
   },
   {
-    "Player": "Tolu Smith",
-    "Team": "Mississippi St.",
+    "Player": "Tolu Smith III",
+    "Team": "mississippi-st",
     "coach": "chaz"
   },
   {
-    "Player": "Josh Hubbard",
-    "Team": "Mississippi St.",
+    "Player": "Josh  Hubbard",
+    "Team": "mississippi-st",
     "coach": "chaz"
   },
   {
@@ -120,8 +120,8 @@
     "coach": "chaz"
   },
   {
-    "Player": "Rj Davis",
-    "Team": "North Carolina",
+    "Player": "RJ Davis",
+    "Team": "north-carolina",
     "coach": "urb"
   },
   {
@@ -135,8 +135,8 @@
     "coach": "urb"
   },
   {
-    "Player": "Laedon Ledee",
-    "Team": "San Diego St.",
+    "Player": "Jaedon Ledee",
+    "Team": "San-Diego-St",
     "coach": "urb"
   },
   {
@@ -146,21 +146,21 @@
   },
   {
     "Player": "Tyon Grant-Foster",
-    "Team": "Grand Canyon",
+    "Team": "Grand-Canyon",
     "coach": "urb"
   },
   {
-    "Player": "Ashor Achor",
+    "Player": "Achor Achor",
     "Team": "Samford",
     "coach": "urb"
   },
   {
     "Player": "Tyson Walker",
-    "Team": "Michigan st.",
+    "Team": "Michigan-st",
     "coach": "urb"
   },
   {
-    "Player": "BradenSmith",
+    "Player": "Braden Smith",
     "Team": "Purdue",
     "coach": "shelton"
   },
@@ -175,23 +175,23 @@
     "coach": "shelton"
   },
   {
-    "Player": "Daron Holmes",
+    "Player": "Daron Holmes II",
     "Team": "Dayton",
     "coach": "shelton"
   },
   {
     "Player": "Meechie Johnson",
-    "Team": "South Carolina",
+    "Team": "south-carolina",
     "coach": "shelton"
   },
   {
     "Player": "Terrence Edwards Jr.",
-    "Team": "James Madison",
+    "Team": "james-madison",
     "coach": "shelton"
   },
   {
-    "Player": "Dj Home",
-    "Team": "NC State",
+    "Player": "Dj Horne",
+    "Team": "north-carolina-st",
     "coach": "shelton"
   },
   {
@@ -201,16 +201,16 @@
   },
   {
     "Player": "Cam Spencer",
-    "Team": "Uconn",
+    "Team": "uconn",
     "coach": "gardner"
   },
   {
-    "Player": "Hunter Dickerson",
+    "Player": "Hunter Dickinson",
     "Team": "Kansas",
     "coach": "gardner"
   },
   {
-    "Player": "Aj Stoff",
+    "Player": "AJ storr",
     "Team": "Wisconsin",
     "coach": "gardner"
   },
@@ -221,7 +221,7 @@
   },
   {
     "Player": "Donovan Dent",
-    "Team": "New Mexico",
+    "Team": "new-mexico",
     "coach": "gardner"
   },
   {
@@ -230,12 +230,12 @@
     "coach": "gardner"
   },
   {
-    "Player": "Tyree Radford",
-    "Team": "Texas A&M",
+    "Player": "Tyrece Radford",
+    "Team": "texas-am",
     "coach": "gardner"
   },
   {
-    "Player": "KJ Simmons",
+    "Player": "KJ Simpson",
     "Team": "Colorado",
     "coach": "gardner"
   },
@@ -246,27 +246,27 @@
   },
   {
     "Player": "Keshon Gilbert",
-    "Team": "Iowa St.",
+    "Team": "iowa-st",
     "coach": "tim kull"
   },
   {
-    "Player": "Ose Ighodaro",
+    "Player": "Oso Ighodaro",
     "Team": "Marquette",
     "coach": "tim kull"
   },
   {
-    "Player": "Rop Isaacs",
-    "Team": "Texas Tech",
+    "Player": "Pop Isaacs",
+    "Team": "texas-tech",
     "coach": "tim kull"
   },
   {
-    "Player": "Kj Adams Jr.",
+    "Player": "Kj Adams, Jr.",
     "Team": "Kansas",
     "coach": "tim kull"
   },
   {
     "Player": "Elliot Cadeau",
-    "Team": "North Carolina",
+    "Team": "north-carolina",
     "coach": "tim kull"
   },
   {
@@ -280,7 +280,7 @@
     "coach": "tim kull"
   },
   {
-    "Player": "Baylor Schelerman",
+    "Player": "Baylor Scheierman",
     "Team": "Creighton",
     "coach": "ludlow"
   },
@@ -296,7 +296,7 @@
   },
   {
     "Player": "Tamin Lipsey",
-    "Team": "Iowa St.",
+    "Team": "iowa-st",
     "coach": "ludlow"
   },
   {
@@ -306,7 +306,7 @@
   },
   {
     "Player": "Jaelen House",
-    "Team": "New Mexico",
+    "Team": "new-mexico",
     "coach": "ludlow"
   },
   {
@@ -315,12 +315,12 @@
     "coach": "ludlow"
   },
   {
-    "Player": "Joseph Girard",
+    "Player": "Joseph Girard III",
     "Team": "Clemson",
     "coach": "ludlow"
   },
   {
-    "Player": "Terrence Shannon",
+    "Player": "Terrence Shannon Jr.",
     "Team": "Illinois",
     "coach": "stick"
   },
@@ -335,7 +335,7 @@
     "coach": "stick"
   },
   {
-    "Player": "J'wan Roberts",
+    "Player": "J'Wan Roberts",
     "Team": "Houston",
     "coach": "stick"
   },
@@ -371,7 +371,7 @@
   },
   {
     "Player": "Harrison Ingram",
-    "Team": "North carolina",
+    "Team": "north-carolina",
     "coach": "bear"
   },
   {
@@ -381,17 +381,17 @@
   },
   {
     "Player": "Milan Momcilovic",
-    "Team": "Iowa St.",
+    "Team": "iowa-st",
     "coach": "bear"
   },
   {
-    "Player": "Josiah Jordan Jamar",
+    "Player": "Josiah-Jordan James",
     "Team": "Tennessee",
     "coach": "bear"
   },
   {
     "Player": "Johnell Davis",
-    "Team": "Fla. Atlantic",
+    "Team": "fla-atlantic",
     "coach": "bear"
   },
   {
@@ -411,7 +411,7 @@
   },
   {
     "Player": "Cormac Ryan",
-    "Team": "North Carolina",
+    "Team": "north-carolina",
     "coach": "herbie"
   },
   {
@@ -420,12 +420,12 @@
     "coach": "herbie"
   },
   {
-    "Player": "Jamal Mashburn Jr.",
-    "Team": "New Mexico",
+    "Player": "Jamal Mashburn, Jr.",
+    "Team": "new-mexico",
     "coach": "herbie"
   },
   {
-    "Player": "DJ Wagner",
+    "Player": "D.J. Wagner",
     "Team": "Kentucky",
     "coach": "herbie"
   },
@@ -436,7 +436,7 @@
   },
   {
     "Player": "Alex Karaban",
-    "Team": "Uconn",
+    "Team": "uconn",
     "coach": "herbie"
   },
   {
@@ -450,7 +450,7 @@
     "coach": "hop"
   },
   {
-    "Player": "Kyle Fillipowski",
+    "Player": "Kyle Filipowski",
     "Team": "Duke",
     "coach": "hop"
   },
@@ -460,7 +460,7 @@
     "coach": "hop"
   },
   {
-    "Player": "ChadBaker-Mazara",
+    "Player": "Chad Baker-Mazara",
     "Team": "Auburn",
     "coach": "hop"
   },
@@ -470,13 +470,13 @@
     "coach": "hop"
   },
   {
-    "Player": "Aldan Mahaney",
-    "Team": "Saint Mary's (CA)",
+    "Player": "Aidan Mahaney",
+    "Team": "st-marys-ca",
     "coach": "hop"
   },
   {
-    "Player": "TJ Bickerstaff",
-    "Team": "James Madison",
+    "Player": "T.J. Bickerstaff",
+    "Team": "James-Madison",
     "coach": "hop"
   },
   {
@@ -485,8 +485,8 @@
     "coach": "vicious"
   },
   {
-    "Player": "Armando Bacat",
-    "Team": "North Carolina",
+    "Player": "Armando Bacot",
+    "Team": "north-carolina",
     "coach": "vicious"
   },
   {
@@ -501,7 +501,7 @@
   },
   {
     "Player": "Curtis Jones",
-    "Team": "Iowa St.",
+    "Team": "iowa-st",
     "coach": "vicious"
   },
   {
@@ -515,13 +515,13 @@
     "coach": "vicious"
   },
   {
-    "Player": "Tre Mitchell",
-    "Team": "Iowa St.",
+    "Player": "Tre King",
+    "Team": "iowa-st",
     "coach": "vicious"
   },
   {
-    "Player": "Tristen Newtown",
-    "Team": "Uconn",
+    "Player": "Tristen Newton",
+    "Team": "uconn",
     "coach": "gman"
   },
   {

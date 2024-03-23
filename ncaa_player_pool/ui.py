@@ -3,13 +3,15 @@ import hank_gathers as hank
 from ipydatagrid import DataGrid
 from player_stats import SquadRow, Squads
 import pandas as pd
-from tabulate import tabulate
+from datetime import datetime, timezone
+import pytz
+import time
+from tzlocal import get_localzone
 
 def get_scores(): 
 
     squads = hank.gather()
     squadRows: List[SquadRow] = []
-
     for squad in squads:
         for player in squad.players:
             sr: SquadRow = SquadRow(coach=squad.coach, player=player.player, team=player.team)
@@ -27,9 +29,10 @@ def get_scores():
     return squadRows
 
 def output_html(outfile: str): 
-
+    est = pytz.timezone('US/Eastern')
     squads: Squads = hank.gather()
     col = ['player', 'team', 'rd1', 'rd2','rd3','rd4','rd5','rd6', 'total']
+    dt = datetime.now(est).strftime('%c')
 
     html = """<html>
 <style>
@@ -47,6 +50,8 @@ h3 .green-text {
 """
     rows: int = 0
     ss = sorted(squads, key=lambda x: x.totalPoints, reverse=True)
+    html += "<h1> Leaderboard</h1>"
+    html += "<h4> updated at {0}</h4>".format(dt)
     for squad in ss:
         html += "<h2> Squad Leader: {0}</h2>".format(squad.coach)
         html += "<h3> total points: {0}</h3>".format(squad.totalPoints)
@@ -85,7 +90,7 @@ def render_scores():
     data = get_scores()
     # df = pd.DataFrame(data)
     # print(tabulate(df, tablefmt='html'))
-    output_html('./test/table.html')
+    output_html('./test/index.html')
 
 if __name__ == "__main__":
     render_scores()
