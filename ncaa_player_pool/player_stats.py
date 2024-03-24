@@ -10,6 +10,7 @@ class Game(BaseModel):
     game: str
     points: int
     round: str
+    winner: bool
 
 
 class PlayerStats(BaseModel):

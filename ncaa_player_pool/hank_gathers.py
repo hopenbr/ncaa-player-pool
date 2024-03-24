@@ -57,6 +57,12 @@ def gather(args=None):
         
         for cg in currentGames:
             game = cg['game']
+            winningTeam: str = ''
+            if game['gameState'] == 'final':
+                if game['home']['winner']:
+                    winningTeam = game['home']['names']['seo']
+                else:
+                    winningTeam = game['away']['names']['seo']
             bsUrl = boxScoreUrl.format(game['url'])
             boxScore: dict = requests.get(bsUrl).json()
             #time.sleep(1)
@@ -64,11 +70,19 @@ def gather(args=None):
             if 'teams' in boxScore.keys():
                 for team in boxScore['teams']:
                     tid: str = '{0}'.format(team['teamId']) #force to string vs int 
-                    teamName = [t for t in boxScore['meta']['teams'] if t['id'] == tid][0]['seoName']
+                    teamInfo = [t for t in boxScore['meta']['teams'] if t['id'] == tid][0]
+                    teamName = teamInfo['seoName']
+                        
 
                     for player in team['playerStats']:
                         points = player['points']
-                        g = Game(date=game['startDate'], game=game['title'], round=game['bracketRound'], points=points)
+                        winner = True
+
+                        if winningTeam:
+                            if winningTeam != teamName:
+                                winner = False
+
+                        g = Game(date=game['startDate'], game=game['title'], round=game['bracketRound'], points=points, winner=winner)
 
                         playerName = '{0} {1}'.format(player['firstName'], player['lastName'])
                         #ps: PlayerStats = next((p.player == playerName for p in playerStats), None)

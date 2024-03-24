@@ -40,8 +40,15 @@ table, th, td {
   border: 1px solid;
 }
 
-h3 .green-text {
-    color: green;
+.strike {
+    text-decoration: line-through;
+    border: 1px solid;
+}
+
+.red-box {
+    color: white;
+    background-color: red;
+    border: 1px solid;
   }
 
 </style>
@@ -61,22 +68,35 @@ h3 .green-text {
             table += "    <th>{0}</th>\n".format(header.strip())
         table += "  </tr>\n"
         for player in squad.players:
-            table += "  <tr>\n"
-            table += "    <td>{0}</td>\n".format(player.player.strip())
-            table += "    <td>{0}</td>\n".format(player.team)
+            lost: bool = False
             i: int = 0
+            gc: str = ''
             for game in player.games:
                 if game.round == 'First Round':
-                    table += "    <td>{0}</td>\n".format(game.points)
+                    gc += "    <td>{0}</td>\n".format(game.points)
                 elif game.round == 'Second Round':
-                    table += "    <td>{0}</td>\n".format(game.points)
+                    gc += "    <td>{0}</td>\n".format(game.points)
                 else: 
                     raise Exception('Unkown round {0}'.format(game.round))
                 i+=1
+                if not game.winner:
+                    lost = True
             
             for f in range(6-i):
-                table += "    <td></td>\n"
-            table += "    <td>{0}</td>\n".format(player.totalPoints)
+                gc += "    <td></td>\n"
+            
+            table += "  <tr>\n"
+
+            if lost:
+                gc += "    <td class='red-box'>{0}</td>\n".format(player.totalPoints)
+                table += "    <td class='strike'>{0}</td>\n".format(player.player.strip())
+                table += "    <td class='strike'>{0}</td>\n".format(player.team)
+            else:
+                gc += "    <td>{0}</td>\n".format(player.totalPoints)
+                table += "    <td>{0}</td>\n".format(player.player.strip())
+                table += "    <td>{0}</td>\n".format(player.team)
+
+            table += gc
             table += "  </tr>\n"
             rows+=1
         table += "</tbody>\n</table>\n"
