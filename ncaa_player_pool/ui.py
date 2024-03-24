@@ -40,9 +40,17 @@ table, th, td {
   border: 1px solid;
 }
 
+.normal {  
+    border: 1px solid;   
+}
+
 .strike {
     text-decoration: line-through;
     border: 1px solid;
+}
+
+.live {
+    color: green;
 }
 
 .red-box {
@@ -71,31 +79,33 @@ table, th, td {
             lost: bool = False
             i: int = 0
             gc: str = ''
+            rowClass = 'normal'
+            totalPointClass = 'normal'
             for game in player.games:
+                if game.status == 'live':
+                    rowClass = 'live'
+                elif not game.winner:
+                    rowClass = "strike"
+                    totalPointClass = "red-box"
+                    
+            
                 if game.round == 'First Round':
                     gc += "    <td>{0}</td>\n".format(game.points)
                 elif game.round == 'Second Round':
-                    gc += "    <td>{0}</td>\n".format(game.points)
+                    gc += "    <td class='{0}'>{1}</td>\n".format(rowClass, game.points)
                 else: 
                     raise Exception('Unkown round {0}'.format(game.round))
                 i+=1
-                if not game.winner:
-                    lost = True
+               
             
             for f in range(6-i):
                 gc += "    <td></td>\n"
             
             table += "  <tr>\n"
-
-            if lost:
-                gc += "    <td class='red-box'>{0}</td>\n".format(player.totalPoints)
-                table += "    <td class='strike'>{0}</td>\n".format(player.player.strip())
-                table += "    <td class='strike'>{0}</td>\n".format(player.team)
-            else:
-                gc += "    <td>{0}</td>\n".format(player.totalPoints)
-                table += "    <td>{0}</td>\n".format(player.player.strip())
-                table += "    <td>{0}</td>\n".format(player.team)
-
+                
+            gc += "    <td class='{0}'>{1}</td>\n".format(totalPointClass, player.totalPoints)
+            table += "    <td class='{0}'>{1}</td>\n".format(rowClass, player.player.strip())
+            table += "    <td class='{0}'>{1}</td>\n".format(rowClass, player.team)
             table += gc
             table += "  </tr>\n"
             rows+=1
