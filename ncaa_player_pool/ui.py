@@ -21,6 +21,10 @@ def get_scores():
                     sr.round1 = game.points
                 elif game.round == 'Second Round':
                     sr.round2 = game.points
+                elif game.round.startswith('Sweet'):
+                    sr.round3 = game.points
+                elif game.round.startswith('Elite'):
+                    sr.round4 = game.points
                 else: 
                     raise Exception('Unkown round {0}'.format(game.round))
             
@@ -31,7 +35,7 @@ def get_scores():
 def output_html(outfile: str): 
     est = pytz.timezone('US/Eastern')
     squads: Squads = hank.gather()
-    col = ['player', 'team', 'rd1', 'rd2','rd3','rd4','rd5','rd6', 'total']
+    col = ['player', 'team', 'r64', 'r32','r16','rd8','rd4','Chp', 'total']
     dt = datetime.now(est).strftime('%c')
 
     html = """<html>
@@ -41,12 +45,11 @@ table, th, td {
 }
 
 .normal {  
-    border: 1px solid;   
+    border: 1px solid;  
 }
 
 .strike {
     text-decoration: line-through;
-    border: 1px solid;
 }
 
 .live {
@@ -84,17 +87,14 @@ table, th, td {
             for game in player.games:
                 if game.status == 'live':
                     rowClass = 'live'
+                    gc += "     <td class='{0}'>{1}</td>\n".format(rowClass, game.points)
                 elif not game.winner:
                     rowClass = "strike"
                     totalPointClass = "red-box"
-                    
-            
-                if game.round == 'First Round':
                     gc += "    <td>{0}</td>\n".format(game.points)
-                elif game.round == 'Second Round':
-                    gc += "    <td class='{0}'>{1}</td>\n".format(rowClass, game.points)
-                else: 
-                    raise Exception('Unkown round {0}'.format(game.round))
+                else:
+                    gc += "    <td>{0}</td>\n".format(game.points)                
+
                 i+=1
                
             

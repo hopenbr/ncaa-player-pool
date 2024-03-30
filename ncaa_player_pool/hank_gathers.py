@@ -93,6 +93,8 @@ def gather(args=None):
 
                         playerName = '{0} {1}'.format(player['firstName'], player['lastName'])
                         #ps: PlayerStats = next((p.player == playerName for p in playerStats), None)
+                        if playerName == 'Terrence Shannon':
+                            playerName = "Terrence Shannon Jr." #in sweet 16 they removed it JR from his name
                         foundPlayer: bool = False
                         for s in squads:
                             for p in s.players:
