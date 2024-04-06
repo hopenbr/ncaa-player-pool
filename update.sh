@@ -1,5 +1,6 @@
 #!/bin/bash
-
+echo 'sleeping til 6:30 pm'
+sleep 17992
 for i in {1..20}
 do
     echo "Pooling games...."

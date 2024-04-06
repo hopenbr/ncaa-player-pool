@@ -4,7 +4,7 @@ import json
 import logging
 import argparse
 import requests
-from player_stats import PlayerStats, Game, Squad, Squads
+from ncaa_player_pool.chalicelib.player_stats import PlayerStats, Game, Squad, Squads
 from typing import List
 import time
 from datetime import datetime

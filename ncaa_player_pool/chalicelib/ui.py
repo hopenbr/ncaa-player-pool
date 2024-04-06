@@ -1,7 +1,7 @@
 from typing import List
 import hank_gathers as hank
 from ipydatagrid import DataGrid
-from player_stats import SquadRow, Squads
+from ncaa_player_pool.chalicelib.player_stats import SquadRow, Squads, PlayerStats
 import pandas as pd
 from datetime import datetime, timezone
 import pytz
@@ -68,6 +68,7 @@ table, th, td {
 """
     rows: int = 0
     ss = sorted(squads, key=lambda x: x.totalPoints, reverse=True)
+    players: List[PlayerStats] = []
     html += "<h1> Leaderboard</h1>"
     html += "<h4> updated at {0}</h4>".format(dt)
     for squad in ss:
@@ -79,6 +80,7 @@ table, th, td {
             table += "    <th>{0}</th>\n".format(header.strip())
         table += "  </tr>\n"
         for player in squad.players:
+            
             lost: bool = False
             i: int = 0
             gc: str = ''
@@ -92,12 +94,14 @@ table, th, td {
                     rowClass = "strike"
                     totalPointClass = "red-box"
                     gc += "    <td>{0}</td>\n".format(game.points)
+                    player.stillPlaying = False
                 else:
                     gc += "    <td>{0}</td>\n".format(game.points)                
 
                 i+=1
-               
-            
+            player.squadCoach = squad.coach
+            players.append(player)
+
             for f in range(6-i):
                 gc += "    <td></td>\n"
             
@@ -111,8 +115,37 @@ table, th, td {
             rows+=1
         table += "</tbody>\n</table>\n"
         html += "{0}\n".format(table)
-    html += "</body>\n</html>"
+    
+    html += "<h2> Top Scorers </h2>"
 
+    avgTable: str = "<table>\n<tbody>\n"
+    avgTable += "  <tr>\n"
+    avgTable += "    <th>player</th>"
+    avgTable += "    <th>team</th>"
+    avgTable += "    <th>squad leader</th>"
+    avgTable += "    <th>total</th>"
+    avgTable += "    <th>games</th>"
+    avgTable += "    <th>avg.</th>"
+    avgTable += "  </tr>\n"
+
+    for player in sorted(players, key=lambda player: player.totalPoints, reverse=True):
+        boxClass = 'normal'
+
+        if not player.stillPlaying:
+            boxClass = 'red-box'
+
+        avgTable += "  <tr>\n"
+        avgTable += "    <td class='{0}'>{1}</td>".format(boxClass, player.player)
+        avgTable += "    <td class='{0}'>{1}</td>".format(boxClass, player.team)
+        avgTable += "    <td class='{0}'>{1}</td>".format(boxClass, player.squadCoach)
+        avgTable += "    <td class='{0}'>{1}</td>".format(boxClass, player.totalPoints)
+        avgTable += "    <td class='{0}'>{1}</td>".format(boxClass, len(player.games))
+        avgTable += "    <td class='{0}'>{1:.1f}</td>".format(boxClass, player.averagePoints)
+        avgTable += "  </tr>\n"
+    avgTable += "</tbody>\n</table>\n"
+
+    html += "{0}\n".format(avgTable)
+    html += "</body>\n</html>"
     with open(outfile, 'w') as out:
         out.writelines(html)
 

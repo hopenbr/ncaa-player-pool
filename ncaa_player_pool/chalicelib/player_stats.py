@@ -18,6 +18,8 @@ class PlayerStats(BaseModel):
     player: str
     team: str
     games: Optional[List[Game]] = List
+    stillPlaying: bool = True
+    squadCoach: str = 'none'
 
     @computed_field
     @property
@@ -26,6 +28,15 @@ class PlayerStats(BaseModel):
         for game in self.games:
             total += game.points
         return total
+    
+    @computed_field
+    @property
+    def averagePoints(self) -> int:
+        games: int = len(self.games)
+        if games > 0:
+            return self.totalPoints / games
+        else:
+            return 0
     
 
 class Squad(BaseModel):
