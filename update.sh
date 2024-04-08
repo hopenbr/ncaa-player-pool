@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i in {1..20}
+for i in {1..16}
 do
     echo "Pooling games...."
     python3 ./ncaa_player_pool/ui.py

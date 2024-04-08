@@ -25,6 +25,10 @@ def get_scores():
                     sr.round3 = game.points
                 elif game.round.startswith('Elite'):
                     sr.round4 = game.points
+                elif game.round.startswith('FINAL'):
+                    sr.round5 = game.points
+                elif game.round.startswith('Championship'):
+                    sr.round6 = game.points
                 else: 
                     raise Exception('Unkown round {0}'.format(game.round))
             
