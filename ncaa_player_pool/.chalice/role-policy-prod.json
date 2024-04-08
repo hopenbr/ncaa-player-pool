@@ -1,0 +1,49 @@
+{
+    "DefaultRole": {
+        "Type": "AWS::IAM::Role",
+        "Properties": {
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Sid": "ncaaplayerstatus",
+                        "Effect": "Allow",
+                        "Principal": {
+                            "Service": "lambda.amazonaws.com"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "Policies": [
+                {
+                    "PolicyDocument": {
+                        "Version": "2012-10-17",
+                        "Statement": [
+                            {
+                                "Effect": "Allow",
+                                "Action": [
+                                    "logs:CreateLogGroup",
+                                    "logs:CreateLogStream",
+                                    "logs:PutLogEvents"
+                                ],
+                                "Resource": "arn:*:logs:*:*:*"
+                            },
+                            {
+                                "Action": [
+                                    "s3:*"
+                                ],
+                                "Resource": [
+                                    "arn:aws:s3:::brianhop.info",
+                                    "arn:aws:s3:::brianhop.info/*"
+                                ],
+                                "Effect": "Allow"
+                            }
+                        ]
+                    },
+                    "PolicyName": "DefaultRolePolicy"
+                }
+            ]
+        }
+    }
+}

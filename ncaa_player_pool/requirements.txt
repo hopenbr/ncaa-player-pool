@@ -1,0 +1,6 @@
+requests 
+pydantic 
+tabulate
+tzlocal
+boto3
+pytz

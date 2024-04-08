@@ -1,11 +1,8 @@
 from typing import List
-import hank_gathers as hank
-from ipydatagrid import DataGrid
-from ncaa_player_pool.chalicelib.player_stats import SquadRow, Squads, PlayerStats
-import pandas as pd
+import chalicelib.hank_gathers as hank
+from chalicelib.player_stats import SquadRow, Squads, PlayerStats
 from datetime import datetime, timezone
 import pytz
-import time
 from tzlocal import get_localzone
 
 def get_scores(): 
@@ -32,7 +29,7 @@ def get_scores():
 
     return squadRows
 
-def output_html(outfile: str): 
+def output_html(): 
     est = pytz.timezone('US/Eastern')
     squads: Squads = hank.gather()
     col = ['player', 'team', 'r64', 'r32','r16','rd8','rd4','Chp', 'total']
@@ -146,14 +143,13 @@ table, th, td {
 
     html += "{0}\n".format(avgTable)
     html += "</body>\n</html>"
-    with open(outfile, 'w') as out:
-        out.writelines(html)
+    return html
 
-def render_scores():
-    data = get_scores()
-    # df = pd.DataFrame(data)
-    # print(tabulate(df, tablefmt='html'))
-    output_html('./test/index.html')
+def render_scores(output_file: str = './test/index.html') -> str:
+    with open(output_file, 'w') as out:
+        out.writelines(output_html())
+    
+    return output_file
 
 if __name__ == "__main__":
     render_scores()

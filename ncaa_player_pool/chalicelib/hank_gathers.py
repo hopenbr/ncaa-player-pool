@@ -4,7 +4,7 @@ import json
 import logging
 import argparse
 import requests
-from ncaa_player_pool.chalicelib.player_stats import PlayerStats, Game, Squad, Squads
+from chalicelib.player_stats import PlayerStats, Game, Squad, Squads
 from typing import List
 import time
 from datetime import datetime
@@ -34,7 +34,7 @@ def gather(args=None):
     currentSquad: Squad = None
 
     logging.info('populating squads')
-    with open('ncaa_player_pool/squads.json', 'r') as info:
+    with open('chalicelib/squads.json', 'r') as info:
         squadData = json.load(info)
 
     for squad in squadData:

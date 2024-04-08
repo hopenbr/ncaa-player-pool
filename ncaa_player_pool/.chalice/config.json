@@ -1,0 +1,9 @@
+{
+    "version": "1.0",
+    "app_name": "ncaaplayerstatus",
+    "stages": {
+      "prod": {
+        "autogen_policy": false
+        }
+    }
+}
