@@ -7,7 +7,7 @@ import boto3
 app = Chalice(app_name="ncaaplayerssquads")
 
 #Rate(15, unit=Rate.MINUTES)
-@app.schedule(Cron('0/15', '*', '?', 4, "MON-TUE", 2024))
+@app.schedule(Cron('0/2', '*', '?', 4, "MON-TUE", 2024))
 def periodic_task(event):
     html = output_html()
 
