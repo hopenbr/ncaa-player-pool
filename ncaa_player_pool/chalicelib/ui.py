@@ -64,13 +64,19 @@ table, th, td {
 <body>
 """
     rows: int = 0
+    highscore: int = 0
     ss = sorted(squads, key=lambda x: x.totalPoints, reverse=True)
     players: List[PlayerStats] = []
     html += "<h1> Leaderboard</h1>"
     html += "<h4> updated at {0}</h4>".format(dt)
     for squad in ss:
         html += "<h2> Squad Leader: {0}</h2>".format(squad.coach)
-        html += "<h3> total points: {0}</h3>".format(squad.totalPoints)
+        html += "<h3> Total points: {0}</h3>".format(squad.totalPoints)
+        if rows == 0:
+            highscore = squad.totalPoints
+        else:
+            pointsBack = highscore - squad.totalPoints
+            html += "<h4> Trailing by: {0}</h4>".format(pointsBack)
         table = "<table>\n<tbody>\n"
         table += "  <tr>\n"
         for header in col:
