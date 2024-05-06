@@ -63,20 +63,27 @@ table, th, td {
 </head>
 <body>
 """
-    rows: int = 0
+    rows: int = 1
     highscore: int = 0
+    lastscore: int = 0
+    nextLeader: str = ''
     ss = sorted(squads, key=lambda x: x.totalPoints, reverse=True)
     players: List[PlayerStats] = []
     html += "<h1> Leaderboard</h1>"
-    html += "<h4> updated at {0}</h4>".format(dt)
+    html += "<h4> last update at {0}</h4>".format(dt)
     for squad in ss:
-        html += "<h2> Squad Leader: {0}</h2>".format(squad.coach)
+        html += "<h2>#{0} Squad Leader: {1}</h2>".format(rows, squad.coach)
         html += "<h3> Total points: {0}</h3>".format(squad.totalPoints)
-        if rows == 0:
+       
+        if rows == 1:
             highscore = squad.totalPoints
         else:
             pointsBack = highscore - squad.totalPoints
-            html += "<h4> Trailing by: {0}</h4>".format(pointsBack)
+            nextLevel = lastscore - squad.totalPoints
+            html += "<h4> Trailing leader by: {0}</h4>".format(pointsBack)
+            html += "<h4> Trailing {0} by: {1}</h4>".format(nextLeader, nextLevel)
+        lastscore = squad.totalPoints
+        nextLeader = squad.coach
         table = "<table>\n<tbody>\n"
         table += "  <tr>\n"
         for header in col:
@@ -115,7 +122,7 @@ table, th, td {
             table += "    <td class='{0}'>{1}</td>\n".format(rowClass, player.team)
             table += gc
             table += "  </tr>\n"
-            rows+=1
+        rows+=1
         table += "</tbody>\n</table>\n"
         html += "{0}\n".format(table)
     
