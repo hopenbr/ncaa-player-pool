@@ -23,6 +23,11 @@ https://data.ncaa.com/stats/basketball-men/d1/current/136/p1.json
 https:\/\/data.ncaa.com\/stats\/basketball-men\/d1\/current\/136\/p1.json"
 
 
+### college bball rankings 
+
+https://www.barttorvik.com/#
+
+
 
 
 https://gist.github.com/akeaswaran/b48b02f1c94f873c6655e7129910fc3b
